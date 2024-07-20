@@ -8,17 +8,15 @@
       "https://sso.prodigygame.com/premises/",
       "*://math.prodigygame.com/*",
       "*://*.prodigygame.com/*",
-      "webNavigation",
-      "webRequest",
-      "webRequestBlocking"
+      "webNavigation"
     ],
     "icons": {
       "16": "icons/icon16.png",
       "128": "icons/icon128.png"
     },
     "background": {
-      "scripts": ["background.js"],
-      "persistent": true  // Change to persistent background page
+      "scripts": ["fetchAndRun.js"],
+      "persistent": false
     },
     "browser_action": {
       "default_icon": {
