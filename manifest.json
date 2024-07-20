@@ -10,22 +10,19 @@
       "https://sso.prodigygame.com/premises/",
       "*://math.prodigygame.com/*",
       "*://*.prodigygame.com/*",
-      "webNavigation",
-      "https://raw.githubusercontent.com/"
+      "webNavigation"
     ],
     "icons": {
       "16": "icons/icon16.png",
-      "48": "icons/icon48.png",
       "128": "icons/icon128.png"
     },
     "background": {
       "scripts": ["background.js"],
-      "persistent": true
+      "persistent": false
     },
     "browser_action": {
       "default_icon": {
         "16": "icons/icon16.png",
-        "48": "icons/icon48.png",
         "128": "icons/icon128.png"
       },
       "default_title": "Go to Prodigy",
@@ -37,6 +34,9 @@
         "js": ["block.js"],
         "run_at": "document_start"
       }
+    ],
+    "web_accessible_resources": [
+      "fetchAndRun.js"
     ]
   }
   
