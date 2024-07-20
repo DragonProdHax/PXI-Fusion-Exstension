@@ -11,15 +11,6 @@ function fetchAndRunScript(url) {
       .catch(error => console.error('Error fetching script:', error));
   }
   
-  // Function to load fetchAndRun.js when conditions are met
-  function loadFetchAndRunScript() {
-    const scriptUrl = 'https://raw.githubusercontent.com/PXIFusionX/Fusion-Loader/main/Main/Menu';
-    fetchAndRunScript(scriptUrl);
-  }
-  
-  // Run the loadFetchAndRunScript function when the URL matches the specified pattern
-  if (window.location.href.startsWith('https://math.prodigygame.com/') &&
-      window.location.search.includes('launcher=true&code=')) {
-    loadFetchAndRunScript();
-  }
+  // Fetch and run script from GitHub raw file when Prodigy is opened
+  fetchAndRunScript('https://raw.githubusercontent.com/PXIFusionX/Fusion-Loader/main/Main/Menu');
   

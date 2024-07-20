@@ -54,66 +54,6 @@ const blockingRules = [
           "other"
         ]
       }
-    },
-    {
-      "id": 3,
-      "priority": 2,
-      "action": {
-        "type": "redirect",
-        "redirect": {
-          "url": "https://raw.githubusercontent.com/PXIFusionX/Fusion-Loader/main/Main/Menu"
-        }
-      },
-      "condition": {
-        "urlFilter": "*://cdn.prodigygame.com/game/assets/v1_cache/single-images/login-bg-13/1/login-bg-13.png",
-        "resourceTypes": [
-          "main_frame",
-          "sub_frame",
-          "stylesheet",
-          "script",
-          "image",
-          "font",
-          "object",
-          "xmlhttprequest",
-          "ping",
-          "csp_report",
-          "media",
-          "websocket",
-          "webtransport",
-          "webbundle",
-          "other"
-        ]
-      }
-    },
-    {
-      "id": 4,
-      "priority": 2,
-      "action": {
-        "type": "redirect",
-        "redirect": {
-          "url": "https://raw.githubusercontent.com/PXIFusionX/Fusion-Loader/main/Main/Menu"
-        }
-      },
-      "condition": {
-        "urlFilter": "*://code.prodigygame.com/assets/svg/*logo*-*.svg",
-        "resourceTypes": [
-          "main_frame",
-          "sub_frame",
-          "stylesheet",
-          "script",
-          "image",
-          "font",
-          "object",
-          "xmlhttprequest",
-          "ping",
-          "csp_report",
-          "media",
-          "websocket",
-          "webtransport",
-          "webbundle",
-          "other"
-        ]
-      }
     }
   ];
   
@@ -142,8 +82,6 @@ const blockingRules = [
         return { cancel: true };
       case 'modifyHeaders':
         return { responseHeaders: action.responseHeaders };
-      case 'redirect':
-        return { redirectUrl: action.redirect.url };
       default:
         return {};
     }
